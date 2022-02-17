@@ -17,4 +17,25 @@
         <servlet-name>TicketController</servlet-name>
         <url-pattern>/ticket</url-pattern>
     </servlet-mapping>
+    <context-param>
+        <param-name>tipo</param-name>
+        <param-value>Adulto</param-value>
+    </context-param>
+    <context-param>
+        <param-name>folio</param-name>
+        <param-value>28</param-value>
+    </context-param>
+    <context-param>
+        <param-name>zona</param-name>
+        <param-value>Azul</param-value>
+    </context-param>
+    <context-param>
+        <param-name>fecha</param-name>
+        <param-value>Sabado 03 Diciembre 2022 21:00 hrs</param-value>
+    </context-param>
+    <context-param>
+        <param-name>concierto</param-name>
+        <param-value>BAD BUNNY WORLDS HOTTEST TOUR</param-value>
+    </context-param>
+    
 </web-app>

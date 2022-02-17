@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.ServletContext;
 
 /**
  *
@@ -78,14 +79,22 @@ public class TicketController extends HttpServlet {
         String city = request.getParameter("city");
         String country = request.getParameter("country");
         String zip = request.getParameter("zip");
-        
+        ServletContext ctx = getServletContext();
+        String folio = ctx.getInitParameter("folio");
+        String tipo = ctx.getInitParameter("tipo");
+        String zona = ctx.getInitParameter("zona");
+        String fecha = ctx.getInitParameter("fecha");
+        String concierto = ctx.getInitParameter("concierto");
         
         RequestDispatcher view = request.getRequestDispatcher("ticket.jsp");
         
         request.setAttribute("nombre", fn.toUpperCase() + " " + ln.toUpperCase());
         request.setAttribute("lugar", "ESTADIO BBVA BANCOMER");
-        request.setAttribute("concierto", "BAD BUNNY WORLDS HOTTEST TOUR");
-        request.setAttribute("fecha", "Sabado 03 Diciembre 2022 21:00 hrs");
+        request.setAttribute("concierto", concierto);
+        request.setAttribute("fecha", fecha);
+        request.setAttribute("tipo", tipo);
+        request.setAttribute("zona", zona);
+        request.setAttribute("folio", folio);
         view.forward(request, response);
     }
 

@@ -27,15 +27,15 @@
       <div class="ticket__timing">
         <p>
           <span class="u-upper ticket__small-label">Folio</span>
-          <span class="ticket__detail">28</span>
+          <span class="ticket__detail"><%= request.getAttribute("folio") %></span>
         </p>
         <p>
           <span class="u-upper ticket__small-label">Tipo</span>
-          <span class="ticket__detail">Adulto</span>
+          <span class="ticket__detail"><%= request.getAttribute("tipo") %></span>
         </p>
         <p>
           <span class="u-upper ticket__small-label">Zona</span>
-          <span class="ticket__detail">Azul</span>
+          <span class="ticket__detail"><%= request.getAttribute("zona") %></span>
         </p>
       </div>
       <p class="ticket__fine-print"><%= request.getAttribute("lugar") %></p>
